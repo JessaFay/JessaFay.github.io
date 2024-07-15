@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS Route Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FEF6FB;
+            color: #4A2A4A;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            background-color: #FFD1DC;
+            padding: 20px;
+            width: 200px;
+            position: fixed;
+            height: 100vh;
+            overflow: auto;
+        }
+        .sidebar a {
+            display: block;
+            padding: 15px 10px;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #FAD0C4;
+            color: #333;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .header {
+            font-family: 'Parisienne', cursive;
+            font-size: 32px;
+            color: #FFA6C1;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .section {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+        .section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .link-button {
+            background-color: #FFA6C1;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px 0;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+        }
+        .link-button:hover {
+            background-color: #F78FA7;
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .image-item {
+            flex: 1 1 30%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .image-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .image-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .video-container {
+            text-align: center;
+        }
+        .video-container iframe {
+            width: 80%;
+            height: 450px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #4A2A4A;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html" onclick="smoothScroll('Home');" id="firstpage.html">Home Page</a>
+        <a href="AboutWebsite.html" onclick="smoothScroll('Welcome');" id="AboutWebsite.html">Welcome</a>
+        <a href="aboutme.html" onclick="smoothScroll('About me');" id="aboutme.html">About Me</a>
+        <a href="skills.html" onclick="smoothScroll('Skills & Resume');" id="skills.html">Skills & Resume</a>
+        <a href="Project.html" onclick="smoothScroll('Project');" id="Project.html">Portfolio</a>
+        <a href="Contactme.html" onclick="smoothScroll('Contact');" id="Contactme.html">Contact</a>
+    </div>
+    <div class="content">
+        <header class="header">GPS Route Finder</header>
+        <section class="section">
+            <h2>Project Overview</h2>
+            <p>This project demonstrates the implementation of a GPS system to find the shortest route between cities using the Breadth-First Search (BFS) algorithm. The system is built using Python and represents cities as nodes in a graph, with edges representing the routes between them.</p>
+            <a href="homework02_gps.pdf" class="link-button">View Objective</a>
+        </section>
+        
+        <section class="section">
+            <h2>Simulation Code</h2>
+            <p>The GPS route finder is implemented using a class-based structure, with classes representing cities and the map. The BFS algorithm is used to determine the shortest path between two cities.</p>
+            <a href="gps.py" class="link-button">View GPS Code</a>
+        </section>
+
+        <section class="section">
+            <h2>Visualization</h2>
+            <p>The visualization script uses the networkx library to plot the graph of cities and routes, showing the shortest path determined by the BFS algorithm.</p>
+            <a href="gps_template.py" class="link-button">View Visualization Code</a>
+        </section>
+
+        <section class="section">
+            <h2>Results and Analysis</h2>
+            <p>Starting from Baltimore fastest route.</p>
+            <p> python3 gps.py --starting_city Baltimore --destination_city 'Daytona Beach'
+                Starting at Baltimore
+                Drive 39 miles on 95 towards Washington, then
+                Drive 53 miles on 95 towards Fredericksburg, then
+                Drive 60 miles on 95 towards Richmond, then
+                Drive 151 miles on 85 towards Durham, then
+                Drive 54 miles on 40 towards Greensboro, then
+                Drive 92 miles on 85 towards Charlotte, then
+                Drive 245 miles on 85 towards Atlanta, then
+                Drive 346 miles on 75 towards Jacksonville, then
+                Drive 86 miles on 95 towards Daytona Beach, then
+                You will arrive at your destination.</p>
+            <p>The simulation results show the shortest paths between various cities, demonstrating the effectiveness of the BFS algorithm in finding the optimal routes.</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Jessa Fayer. All rights reserved.</p>
+    </footer>
+</body>
+</html>

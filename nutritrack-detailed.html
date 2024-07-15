@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutritional Tracking App - Jessa Fayer's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FEF6FB;
+            color: #4A2A4A;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            background-color: #FFD1DC;
+            padding: 20px;
+            width: 220px;
+            position: fixed;
+            height: 100vh;
+            overflow: auto;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 15px 10px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s, background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .sidebar a:hover {
+            background-color: #FAD0C4;
+            color: #333;
+            transform: translateX(5px);
+        }
+        .content {
+            margin-left: 240px;
+            padding: 20px;
+        }
+        .header {
+            font-family: 'Parisienne', cursive;
+            font-size: 36px;
+            color: #FFA6C1;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #FAD0C4;
+            padding-bottom: 10px;
+        }
+        .section {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+        .section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .link-button {
+            background-color: #FFA6C1;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px 0;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+        }
+        .link-button:hover {
+            background-color: #F78FA7;
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        footer {
+            background-color: #4A2A4A;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .image-item {
+            flex: 1 1 30%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .image-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .image-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .image-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html" onclick="smoothScroll('Home');" id="index.html">Home</a>
+        <a href="AboutWebsite.html" onclick="smoothScroll('Welcome');" id="AboutWebsite.html">About This Site</a>
+        <a href="aboutme.html" onclick="smoothScroll('About me');" id="aboutme.html">Meet Jessa</a>
+        <a href="skills.html" onclick="smoothScroll('Skills & Resume');" id="skills.html">Skills & Experience</a>
+        <a href="techproject.html" onclick="smoothScroll('Project');" id="techproject.html">My Projects</a>
+        <a href="Contactme.html" onclick="smoothScroll('Contact');" id="Contactme.html">Get In Touch</a>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            Nutritional Tracking App: Development Insights
+        </div>
+        <div class="section">
+            <h2>Idea Generation and Development Phases</h2>
+            <p>This project aimed to create a comprehensive nutritional tracking app tailored for college students, focusing on meal tracking, diet planning, and weight management.</p>
+
+            <h3>Initial Concept</h3>
+            <ul>
+                <li><strong>Meal Tracker</strong>: Allows users to log meals and track calories.</li>
+                <li><strong>Diet Planning</strong>: Provides tailored eating plans based on user goals.</li>
+                <li><strong>Weight Tracker</strong>: Monitors weight changes and progress over time.</li>
+            </ul>
+
+            <h3>Integration and Enhancement</h3>
+            <p>The integration of these features into a single application enhances the user's understanding of diet and nutrition and facilitates efficient health management.</p>
+
+            <h3>Addressing Challenges</h3>
+            <p>The main challenge was balancing the simplicity of the app with the need to provide comprehensive nutritional information. We achieved this by:</p>
+            <ul>
+                <li>Designing an intuitive user interface that simplifies complex data.</li>
+                <li>Providing educational resources within the app to help users make informed decisions.</li>
+                <li>Implementing customizable settings to allow users to adjust the app according to their specific dietary needs.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Prototype and User Feedback</h2>
+            <p>The prototype was developed to test these features, with a focus on user-friendliness and effectiveness in promoting healthy eating habits among students.</p>
+            <a href="https://www.figma.com/file/KLaKX0JfS0mYHkZEjdXeDQ/Teams_Design?type=design&node-id=0%3A1&mode=design&t=hoimTSAFjrQ06HDT-1" target="_blank" class="link-button">View Prototype on Figma</a>
+        </div>
+
+        <div class="section">
+            <h2>Additional Resources</h2>
+            <p>Explore more about the development process and user interactions with our project:</p>
+            <a href="slideshow.pdf" target="_blank" class="link-button">Project Slideshow Presentation</a>
+            <a href="groupproject3.pdf" target="_blank" class="link-button">Open PDF</a>
+        </div>
+
+        <div class="section">
+            <div class="image-container">
+                <div class="image-item">
+                    <h2>Main Screen Layout</h2>
+                    <img src="homescreann.jpg" alt="NutriTrack App Main Screen">
+                    <p>This screen shows the standard layout of an iPhone with the NutriTrack app icon in the dock.</p>
+                </div>
+                <div class="image-item">
+                    <h2>Login Screen</h2>
+                    <img src="Login-Screen.jpg" alt="NutriTrack App Login Screen">
+                    <p>This screen presents the login interface with fields for username and password.</p>
+                </div>
+                <div class="image-item">
+                    <h2>Dashboard Screen</h2>
+                    <img src="Dashboard.jpg" alt="NutriTrack App Dashboard">
+                    <p>The dashboard provides an overview of health metrics with graphical representations.</p>
+                </div>
+                <div class="image-item">
+                    <h2>Community Screen</h2>
+                    <img src="community.jpg" alt="NutriTrack App Community Screen">
+                    <p>This community interaction page allows users to post comments, reply, and manage their engagement.</p>
+                </div>
+                <div class="image-item">
+                    <h2>Users Screen</h2>
+                    <img src="community_screen.jpg" alt="NutriTrack App Community Screen">
+                    <p>A reaffirmation of the Community Screen, showcasing user interaction features.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 NutriTrack App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

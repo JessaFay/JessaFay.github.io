@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Jessa Fayer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FEF6FB;
+            color: #4A2A4A;
+            margin: 0;
+            padding: 0; 
+        }
+        .sidebar {
+            background-color: #FFD1DC;
+            padding: 20px;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            transition: width 0.3s ease;
+        }
+        .sidebar:hover {
+            width: 270px; /* Expand on hover */
+        }
+        .sidebar a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .sidebar a:hover {
+            background-color: #FAD0C4;
+            transform: scale(1.05);
+        }
+        .content {
+            margin-left: 270px; /* Adjusted for sidebar padding */
+            padding: 20px;
+        }
+        .header {
+            font-size: 32px;
+            font-family: 'Parisienne', cursive;
+            color: #FFA6C1;
+            margin-bottom: 20px;
+        }
+        .section {
+            width: 80%;
+            margin-top: 20px;
+            padding: 20px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .button {
+            background-color: #FFA6C1;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #F78FA7;
+            transform: scale(1.1);
+        }
+        .film-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .film {
+            background-color: #FFF0F5;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            width: 48%; /* Ensures two columns layout */
+        }
+        .film img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="firstpageage.html">Home</a></li>
+            <li><a href="AboutWebsite.html">Welcome</a></li>
+            <li><a href="AboutMe.html">About Me</a></li>
+            <li><a href="Project.html">Skills & Resume</a></li>
+            <li><a href="ContactMe.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="header">About Jessa Fayer</div>
+        <div id="welcome" class="section">
+            <h1>Background</h1>
+            <p>My name is Jessa Fayer. I hold a Bachelor’s degree in Information Science from the University of Maryland. My academic journey there not only shaped my professional path but also deepened my passion for the field.</p>
+            <p>I’m a first-generation American. Most of my childhood was spent in Maryland, but my early years took me back to Odessa, Ukraine.</p>
+            <p>As the second of four children, the importance of family resonates strongly with me. My Ukrainian roots run deep, thanks to my parents, and this blend of cultures has not only shaped my worldview but also fueled my passion for connecting with and honoring my heritage.</p>
+        </div>
+        <div class="section about">
+            <h2>Passion</h2>
+            <p>I'm passionate about using my platform to spotlight Ukraine’s vibrant culture and address its urgent issues. As a community advocate, I’ve been involved in organizing cultural exhibitions, participating in community outreach, and speaking at events to support the Ukrainian community. These activities are more than just tasks—they are personal connections that help me contribute significantly to the Ukrainian diaspora and stay in touch with where I came from.</p>
+        </div>
+        <div class="section about">
+            <h2>Non-Programming Interests And Work</h2>
+            <p>During my university years, I immersed myself in a diverse array of clubs and activities that spanned the cyber security club, ballroom dancing, ballet, and the film club. My passion for the film industry runs deep—I thrive as a writer, director, and actor. Acting, in particular, holds a special place in my heart; I've had the privilege of bringing characters to life in approximately half a dozen student short films throughout my college career.</p>
+            <p>Professionally, my experience extends to several films and commercials, showcasing a broad range of roles and challenges that have honed my craft further. Beyond the silver screen, I have nurtured a passion for photography and modeling, industries in which I have been actively involved for over six years.</p>
+            <p>My love for coding and digital art is intertwined with my creative pursuits. These fields provide me with the unique opportunity to blend technical skills with my artistic vision. Photography celebrates symmetry and composition, while acting allows me to explore various narratives and expressions. This fusion of creativity and technology is what truly captivates me, offering endless possibilities to tell stories and express emotions through multiple forms of art.</p>
+        </div>
+        <div class="section about">
+            <h2>Jessa's Pickled Delights</h2>
+            <p>I am the proud founder of Jessica's Pickle Delights, a vibrant new venture in the food and service industry. Our specialty lies in creating unique, gourmet-flavored pickles that have quickly become a local favorite across Maryland. From bustling farmers' markets to quaint local stands, our pickles offer an innovative twist on a classic treat.</p>
+            <p>We're committed to sustainability and quality, sourcing all our ingredients from local vendors and farmers who share our dedication to using non-pesticidal chemicals. While Jessica's Pickle Delights is still growing and evolving, we are excited about the future and eager to expand our reach.</p>
+            <p>For those interested in a deeper understanding of our processes and aspirations, I have compiled a detailed research analysis that explores the nuances of our business and the journey so far. Your support and curiosity mean the world to us as we continue to spice up the pickle industry with our creative flavors.</p>
+            <a href="Contents.pdf" class="button">Learn More</a>  
+        </div>
+        <div class="section watch a clip">
+            <h2>A Short Clip</h2>
+            <div class="film">
+                <h3>Wendsday</h3>
+                <video width="100%" controls>
+                    <source src="15a3a5b4220e4adba52bedbb1d0219ae.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>    
+        </div>
+    </div>
+</body>
+</html>

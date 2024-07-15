@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StressSync Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FEF6FB;
+            color: #4A2A4A;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            background-color: #FFD1DC;
+            padding: 20px;
+            width: 220px;
+            position: fixed;
+            height: 100vh;
+            overflow: auto;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 15px 10px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s, background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .sidebar a:hover {
+            background-color: #FAD0C4;
+            color: #333;
+            transform: translateX(5px);
+        }
+        .container {
+            margin-left: 240px;
+            padding: 20px;
+        }
+        .header {
+            font-family: 'Parisienne', cursive;
+            font-size: 36px;
+            color: #FFA6C1;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #FAD0C4;
+            padding-bottom: 10px;
+        }
+        .section {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+        .section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .btn {
+            background-color: #FFA6C1;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px 0;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+        }
+        .btn:hover {
+            background-color: #F78FA7;
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #4A2A4A;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html">Home Page</a>
+        <a href="AboutWebsite.html">Welcome</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="skills.html">Skills & Resume</a>
+        <a href="Project.html">Portfolio</a>
+        <a href="Contactme.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <div class="header">StressSync Project</div>
+        <div class="section">
+            <h2>Project Overview</h2>
+            <p>StressSync is an innovative application designed to help students manage their time and stress effectively. It integrates directly with Apple Watches to provide real-time feedback and suggestions based on monitoring heart rate and activity levels.</p>
+            <p>More details can be found on the project's dedicated website: <a href="https://sites.google.com/terpmail.umd.edu/timeforasolution/home?authuser=0" target="_blank">Time for a Solution</a>.</p>
+        </div>
+        <div class="section">
+            <h2>Design Process</h2>
+            <p>This section covers the iterative design process, including initial concept development, user research, prototype creation, and user testing phases.</p>
+        </div>
+        <div class="section">
+            <h2>User Testimonials</h2>
+            <p>Quotes and feedback from real users who have tested StressSync, highlighting the app's impact on their stress management and productivity.</p>
+        </div>
+        <div class="section">
+            <h2>Technological Details</h2>
+            <p>This section discusses the technological aspects of StressSync, such as its integration with Apple Watch, data privacy measures, and the algorithms used for stress prediction and management.</p>
+        </div>
+        <div class="section">
+            <h2>Future Enhancements</h2>
+            <p>Potential future updates and enhancements for StressSync, based on user feedback and emerging technologies.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Jessa Fayer</p>
+        <p>Built from scratch using HTML, CSS, and JavaScript</p>
+    </footer>
+</body>
+</html>

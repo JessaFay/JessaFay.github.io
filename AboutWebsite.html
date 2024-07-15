@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About This Site - Jessa Fayer's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FEF6FB;
+            color: #4A2A4A;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            background-color: #FFD1DC;
+            padding: 20px;
+            width: 220px;
+            position: fixed;
+            height: 100vh;
+            overflow: auto;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 15px 10px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s, background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .sidebar a:hover {
+            background-color: #FAD0C4;
+            color: #333;
+            transform: translateX(5px);
+        }
+        .content {
+            margin-left: 240px;
+            padding: 20px;
+        }
+        .header {
+            font-family: 'Parisienne', cursive;
+            font-size: 36px;
+            color: #FFA6C1;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #FAD0C4;
+            padding-bottom: 10px;
+        }
+        .section {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+        .section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .link-button {
+            background-color: #FFA6C1;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px 0;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+        }
+        .link-button:hover {
+            background-color: #F78FA7;
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        canvas {
+            background: #000;
+            display: block;
+            margin: auto;
+        }
+        #score {
+            color: #4A2A4A;
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #4A2A4A;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html" onclick="smoothScroll('Home');" id="index.html">Home</a>
+        <a href="AboutWebsite.html" onclick="smoothScroll('Welcome');" id="AboutWebsite.html">About This Site</a>
+        <a href="aboutme.html" onclick="smoothScroll('About me');" id="aboutme.html">Meet Jessa</a>
+        <a href="skills.html" onclick="smoothScroll('Skills & Resume');" id="skills.html">Skills & Experience</a>
+        <a href="techproject.html" onclick="smoothScroll('Project');" id="techproject.html">My Projects</a>
+        <a href="Contactme.html" onclick="smoothScroll('Contact');" id="Contactme.html">Get In Touch</a>
+    </div>
+    <div class="content">
+        <div class="header">
+            About This Site
+        </div>
+        <div class="section">
+            <h2>Welcome to My Portfolio!</h2>
+            <p>This website is a digital showcase of my work and skills. I've built it from scratch using HTML, CSS, and JavaScript to provide a seamless and engaging experience for visitors.</p>
+            <p>Here you can find detailed information about my projects, my professional journey, and how to contact me for collaborations or job opportunities.</p>
+            <a href="techproject.html" class="link-button">View My Projects</a>
+            <a href="aboutme.html" class="link-button">Learn More About Me</a>
+            <a href="Contactme.html" class="link-button">Contact Me</a>
+        </div>
+        <div class="section">
+            <h2>Purpose</h2>
+            <p>The main purpose of this site is to provide a comprehensive overview of my professional journey, skills, and projects. It serves as a platform to connect with potential collaborators and employers.</p>
+            <p>By navigating through the site, you can explore my portfolio, understand my expertise, and see how I can contribute to your projects or organization.</p>
+        </div>
+        <div class="section">
+            <h2>Technologies Used</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+            </ul>
+            <p>These technologies have allowed me to create an interactive and user-friendly website that showcases my skills and projects effectively.</p>
+        </div>
+        <div id="play" class="section">
+            <h2>Play a Game of Pong</h2>
+            <canvas id="pongCanvas" width="800" height="400"></canvas>
+            <div id="score">Left Player: 0 | Right Player: 0</div>
+            <p>Controls:</p>
+            <ul>
+                <li>Space bar to start a game</li>
+                <li>Arrow keys for movement</li>
+                <li>W and S keys for movement (left player)</li>
+                <li>ESC to exit game</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Jessa Fayer</p>
+        <p>Built from scratch using HTML, CSS, and JavaScript</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var canvas = document.getElementById("pongCanvas");
+            var ctx = canvas.getContext("2d");
+
+            var ballRadius = 10;
+            var x = canvas.width / 2;
+            var y = canvas.height / 2;
+            var dx = 2;
+            var dy = 2;
+
+            var paddleHeight = 75;
+            var paddleWidth = 10;
+            var leftPaddleY = (canvas.height - paddleHeight) / 2;
+            var rightPaddleY = (canvas.height - paddleHeight) / 2;
+
+            var upPressed = false;
+            var downPressed = false;
+            var wPressed = false;
+            var sPressed = false;
+
+            var scoreLeft = 0;
+            var scoreRight = 0;
+
+            var gameStarted = false;
+            var animationFrameId;
+
+            document.addEventListener("keydown", keyDownHandler, false);
+            document.addEventListener("keyup", keyUpHandler, false);
+
+            function keyDownHandler(e) {
+                if (e.key === "ArrowUp") {
+                    upPressed = true;
+                } else if (e.key === "ArrowDown") {
+                    downPressed = true;
+                } else if (e.key === "w" || e.key === "W") {
+                    wPressed = true;
+                } else if (e.key === "s" || e.key === "S") {
+                    sPressed = true;
+                } else if (e.key === " " && !gameStarted) {
+                    gameStarted = true;
+                    draw();
+                } else if (e.key === "Escape") {
+                    cancelAnimationFrame(animationFrameId);
+                    gameStarted = false;
+                    resetGame();
+                }
+            }
+
+            function keyUpHandler(e) {
+                if (e.key === "ArrowUp") {
+                    upPressed = false;
+                } else if (e.key === "ArrowDown") {
+                    downPressed = false;
+                } else if (e.key === "w" || e.key === "W") {
+                    wPressed = false;
+                } else if (e.key === "s" || e.key === "S") {
+                    sPressed = false;
+                }
+            }
+
+            function resetGame() {
+                x = canvas.width / 2;
+                y = canvas.height / 2;
+                dx = 2;
+                dy = 2;
+                draw();
+            }
+
+            function drawBall() {
+                ctx.beginPath();
+                ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+                ctx.fillStyle = "#0095DD";
+                ctx.fill();
+                ctx.closePath();
+            }
+
+            function drawPaddle(x, y) {
+                ctx.beginPath();
+                ctx.rect(x, y, paddleWidth, paddleHeight);
+                ctx.fillStyle = "#0095DD";
+                ctx.fill();
+                ctx.closePath();
+            }
+
+            function drawNet() {
+                ctx.beginPath();
+                ctx.setLineDash([10, 10]);
+                ctx.moveTo(canvas.width / 2, 0);
+                ctx.lineTo(canvas.width / 2, canvas.height);
+                ctx.strokeStyle = "#FFFFFF";
+                ctx.stroke();
+                ctx.closePath();
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawNet();
+                drawBall();
+                drawPaddle(0, leftPaddleY);
+                drawPaddle(canvas.width - paddleWidth, rightPaddleY);
+
+                if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+                    dy = -dy;
+                }
+
+                if (x + dx < ballRadius) {
+                    if (y > leftPaddleY && y < leftPaddleY + paddleHeight) {
+                        dx = -dx;
+                    } else {
+                        scoreRight++;
+                        resetGame();
+                    }
+                } else if (x + dx > canvas.width - ballRadius) {
+                    if (y > rightPaddleY && y < rightPaddleY + paddleHeight) {
+                        dx = -dx;
+                    } else {
+                        scoreLeft++;
+                        resetGame();
+                    }
+                }
+
+                if (upPressed && rightPaddleY > 0) {
+                    rightPaddleY -= 7;
+                } else if (downPressed && rightPaddleY < canvas.height - paddleHeight) {
+                    rightPaddleY += 7;
+                }
+
+                if (wPressed && leftPaddleY > 0) {
+                    leftPaddleY -= 7;
+                } else if (sPressed && leftPaddleY < canvas.height - paddleHeight) {
+                    leftPaddleY += 7;
+                }
+
+                x += dx;
+                y += dy;
+                document.getElementById("score").innerText = `Left Player: ${scoreLeft} | Right Player: ${scoreRight}`;
+                if (gameStarted) {
+                    animationFrameId = requestAnimationFrame(draw);
+                }
+            }
+
+            resetGame();
+        });
+    </script>
+</body>
+</html>

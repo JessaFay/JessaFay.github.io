@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessa Fayer's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FEF6FB;
+            color: #4A2A4A;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            background-color: #FFD1DC;
+            padding: 20px;
+            width: 220px;
+            position: fixed;
+            height: 100vh;
+            overflow: auto;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 15px 10px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s, background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .sidebar a:hover {
+            background-color: #FAD0C4;
+            color: #333;
+            transform: translateX(5px);
+        }
+        .content {
+            margin-left: 240px;
+            padding: 20px;
+        }
+        .header {
+            font-family: 'Parisienne', cursive;
+            font-size: 36px;
+            color: #FFA6C1;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #FAD0C4;
+            padding-bottom: 10px;
+        }
+        .section {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+        .section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .btn {
+            background-color: #FFA6C1;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px 0;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+        }
+        .btn:hover {
+            background-color: #F78FA7;
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #4A2A4A;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html" onclick="smoothScroll('Home');" id="index.html">Home</a>
+        <a href="AboutWebsite.html" onclick="smoothScroll('Welcome');" id="AboutWebsite.html">About This Site</a>
+        <a href="aboutme.html" onclick="smoothScroll('About me');" id="aboutme.html">Meet Jessa</a>
+        <a href="skills.html" onclick="smoothScroll('Skills & Resume');" id="skills.html">Skills & Experience</a>
+        <a href="techproject.html" onclick="smoothScroll('Project');" id="techproject.html">My Projects</a>
+        <a href="Contactme.html" onclick="smoothScroll('Contact');" id="Contactme.html">Get In Touch</a>
+    </div>
+
+    <div class="content">
+        <div class="header">Jessa Fayer's Portfolio</div>
+        <h1>Technical Projects</h1>
+        <div class="section">
+            <h2>A Brief Introduction to Network Security and Firewalls</h2>
+            <p>Explore the fundamentals of network security and practical applications of firewalls with a mini lab demonstration.</p>
+            <a href="network-security.html" class="btn">Visit Project</a>
+        </div>
+        <div class="section">
+            <h2>StressSync</h2>
+            <p>An innovative app to manage student time and stress by integrating with Apple Watch.</p>
+            <a href="stresssync.html" class="btn">Visit Project</a>
+        </div>
+        <div class="section">
+            <h2>StudyQuestz</h2>
+            <p>Transform your study habits with StudyQuestz, a game that makes learning engaging and effective.</p>
+            <a href="studyquestz.html" class="btn">Visit Project</a>
+        </div>
+        <div class="section">
+            <h2>Pong Game</h2>
+            <p>Experience the classic Pong game recreated in HTML5 canvas, featuring adjustable difficulty and multiplayer options.</p>
+            <a href="pong-game.html" class="btn">Visit Project</a>
+        </div>
+        <div class="section">
+            <h2>NutriTrack: Empowering Healthier Choices</h2>
+            <p>This project focuses on aiding college students at UMD in understanding their nutritional intake with a simple, user-friendly interface. Check the link below for detailed insights and prototype images.</p>
+            <a href="nutritrack-detailed.html" class="btn">Visit Project</a>
+        </div>
+        <div class="section">
+            <h2>Database Design for IT Job Market Insights</h2>
+            <p>Discover how our team tackled the complexities of the IT job market through sophisticated database design, providing actionable insights into industry trends and demands.</p>
+            <a href="it-job-market-insights.html" class="btn">Visit Project</a>
+        </div>
+        <div class="section">
+            <h2>Digital Curation Odyssey: The 4-H National Council Archives Project</h2>
+            <p>Embark on a journey through the intricate and groundbreaking world of digital curation.</p>
+            <a href="4-H.html" class="btn">Visit Project</a>
+        </div>
+        <div class="section">
+            <h2>Monty Hall Simulation</h2>
+            <p>Understand the famous Monty Hall Problem through simulations and visualizations, demonstrating the Central Limit Theorem.</p>
+            <a href="monty-hall-simulation.html" class="btn">Visit Project</a>
+        </div>
+        <div class="section">
+            <h2>GPS Route Finder</h2>
+            <p>Discover the shortest routes between cities using the Breadth-First Search algorithm implemented in a Python-based GPS system.</p>
+            <a href="gps-route-finder.html" class="btn">Visit Project</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Jessa Fayer</p>
+        <p>Built from scratch using HTML, C++, JavaScript</p>
+    </footer>
+</body>
+</html>

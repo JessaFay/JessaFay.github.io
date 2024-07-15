@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyQuestz - Gamifying Learning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FEF6FB;
+            color: #4A2A4a;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            background-color: #FFD1DC;
+            padding: 20px;
+            width: 250px;
+            position: fixed;
+            height: 100vh;
+            overflow: auto;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #FAD0C4;
+            color: #333;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        .header {
+            font-family: 'Parisienne', cursive;
+            font-size: 28px;
+            color: #FFA6C1;
+            margin-bottom: 20px;
+        }
+        .section {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .section:hover {
+            transform: scale(1.03);
+        }
+        .button {
+            background-color: #FFA6C1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #F78FA7;
+            transform: scale(1.05);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#home" onclick="smoothScroll('home')">Home Page</a>
+        <a href="#welcome" onclick="smoothEvent(event, 'welcome')">Welcome</a>
+        <a href="#about" onclick="smoothEvent(event, 'about')">About Me</a>
+        <a href="#portfolio" onclick="smoothEvent(event, 'portfolio')">Portfolio</a>
+        <a href="#contact" onclick="smoothEvent(event, 'contact')">Contact</a>
+    </div>
+    <div class="content" id="home">
+        <div class="header">Digital Curation Odyssey: The 4-H National Council Archives Project</div>
+        <div class="section">
+            <p>Embark on a journey through the intricate and groundbreaking world of digital curation with our INST442 FA2022 Group Project. This expedition saw us navigating the vast digital landscape to safeguard the historical treasures of the 4-H National Council archives.</p>
+            <ul>
+                <li><strong>Archival Reconnaissance:</strong> Our initial foray involved delving into the archives, identifying and cataloging records with precision and care. A pilgrimage to the CAFe Lab was essential to this endeavor.</li>
+                <li><strong>Lexical Crafting:</strong> We sculpted a lexicon of categories and controlled vocabulary, laying the foundation for a unified archival language.</li>
+                <li><strong>Standardization Saga:</strong> With insights from the guardians of 4-H history, we refined our classifications, ensuring each artifact's story would be coherently told.</li>
+                <li><strong>Digital Transmutation:</strong> Venturing once more into the CAFe Lab, we transformed selected analog relics into digital form, immortalizing their essence for future generations.</li>
+                <li><strong>Strategic Archival Futures:</strong> We envisaged the destiny of these digital treasures, plotting a course for their preservation and access in the digital realm.</li>
+                <li><strong>Culmination Chronicle:</strong> The final assembly of our digital dossiers and reflections marked the end of our quest, leaving a legacy of knowledge for the digital age.</li>
+            </ul>
+            <img src="IMG_5177.jpg" alt="National Security Archive">
+            <p>View the detailed documentation and learn more about our findings <a href="4-H.pdf" target="_blank">here</a>.</p>
+            <p>Through this odyssey, we not only preserved a piece of history but also paved the way for future digital curators. The 4-H National Council archives project stands as a testament to the power of collaboration, innovation, and digital foresight.</p>
+            <a href="Project.html" class="btn">Return to Project Page</a>
+        </div>
+    </div>
+    <script>
+        function smoothScroll(targetId) {
+            const element = document.getElementById(targetId);
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        function smoothEvent(event, targetId) {
+            event.preventDefault();
+            smoothScroll(targetId);
+        }
+    </script>
+</body>
+</html>

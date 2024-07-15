@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Design for IT Job Market Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FEF6FB;
+            color: #4A2A4A;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            width: 220px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            overflow-y: auto;
+            background-color: #FFD1DC;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            transition: width 0.3s ease;
+            font-size: 18px;
+        }
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .sidebar a:hover {
+            background-color: #FAD0C4;
+            color: #333;
+            transform: translateX(5px);
+        }
+        .content {
+            margin-left: 240px;
+            padding: 20px;
+        }
+        .header {
+            background-color: #FFD1DC;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 30px;
+            border-bottom: 5px solid #FAD0C4;
+            font-family: 'Parisienne', cursive;
+        }
+        .section {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .btn {
+            background-color: #FFA6C1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px 0;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .btn:hover {
+            background-color: #F78FA7;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .image-item {
+            flex: 1 1 30%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .image-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+        }
+        .image-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .image-item {
+                flex: 1 1 100%;
+            }
+        }
+        footer {
+            background-color: #4A2A4A;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html" onclick="smoothScroll('Home');">Home Page</a>
+        <a href="AboutWebsite.html" onclick="smoothScroll('Welcome');">Welcome</a>
+        <a href="aboutme.html" onclick="smoothScroll('About me');">About Me</a>
+        <a href="skills.html" onclick="smoothScroll('Skills & Resume');">Skills & Resume</a>
+        <a href="Project.html" onclick="smoothScroll('Project');">Portfolio</a>
+        <a href="Contactme.html" onclick="smoothScroll('Contact');">Contact</a>
+    </div>
+    <div class="content">
+        <header class="header">
+            Database Design for IT Job Market Insights
+        </header>
+        <section class="section">
+            <h2>Project Overview</h2>
+            <p>Our team embarked on creating a comprehensive database aimed at revolutionizing the IT job market, leveraging data from across Europe to offer deep insights into job trends, salaries, and valued skills. This project highlights the challenges and methodologies of database design and modeling, emphasizing the dynamic IT sector's demands.</p>
+        </section>
+        <section class="section">
+            <h2>Project Highlights</h2>
+            <ul>
+                <li>Analysis of the "Polish IT Job Postings" dataset, refined to capture current trends</li>
+                <li>Development of nine tables to detail every aspect of job postings</li>
+                <li>Insights into salary trends, job distribution, and sought-after skills in the IT domain</li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>Challenges and Solutions</h2>
+            <p>Our journey involved navigating through vast datasets, refining and normalizing data to ensure integrity and utility. Collaboration and expert consultations were pivotal in overcoming these challenges.</p>
+        </section>
+        <section class="section">
+            <h2>Future Directions</h2>
+            <p>With an eye towards global expansion, we aim to enrich our database with more granular data, including company profiles and job seeker resources, to foster a more inclusive and comprehensive IT job marketplace.</p>
+        </section>
+        <section class="section">
+            <h2>Download Report</h2>
+            <p>You can download the full database design report for a detailed analysis and insights:</p>
+            <a href="Database Design.pdf" target="_blank" class="btn">Download Report</a>
+        </section>
+        <section class="image-container">
+            <div class="image-item">
+                <h2>ER Diagram</h2>
+                <img src="Untitled.jpg" alt="Logical Design">
+                <img src="Untit.jpg" alt="ER Diagram">
+                <p>This diagram represents the entities and relationships in our database design.</p>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Interactive Data Insights</h2>
+            <p>Our database design aimed at providing comprehensive insights into the IT job market, using refined data from the "Polish IT Job Postings" dataset. Below are some key data views and queries implemented:</p>
+            <ul>
+                <li><strong>Company Average Salary:</strong> Displays the average salary per company.</li>
+                <li><strong>Jobs Per Country:</strong> Shows the number of IT jobs per country.</li>
+                <li><strong>Polish Min/Max/Mean Salaries:</strong> Shows the minimum, mean, and maximum salaries for Polish IT positions.</li>
+                <li><strong>Remote Jobs Number:</strong> Displays the number of remote jobs.</li>
+                <li><strong>Valued Skills:</strong> Shows the most sought-after coding languages and skills.</li>
+                <li><strong>Companies Above Average Salary:</strong> Displays companies offering salaries above the average.</li>
+            </ul>
+            <p>These insights help in understanding the current trends and demands in the IT job market, providing valuable information for job seekers and employers alike.</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 IT Job Market Insights. All rights reserved.</p>
+    </footer>
+</body>
+</html>
